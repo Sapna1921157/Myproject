@@ -70,6 +70,7 @@ showpw:Boolean=true
   //   });
   // }
   login() {
+  
 
     // if(!this.captchaStatus || this.captchaStatus == false){
     //   this.notiService.showInfo("Please verify capcha");
@@ -97,7 +98,7 @@ showpw:Boolean=true
     //       document.getElementById("orgPassword")?.setAttribute('type','password');
     //       document.getElementById("Password")?.setAttribute('type','hidden')
     //     }
-    //   }
+       }
 
   //   }, error => {
   //     // console.log("timeout",error.error.message);
@@ -132,21 +133,21 @@ showpw:Boolean=true
 
 
 
-  // signup() {
-  //   this.router.navigate(['/signup'])
-  // }
+  signup(){
+   this.router.navigate(['/signup'])
+   }
 
   // ngOnDestroy(): void{
   //   this.captchaStatus = false;
   // }
 
   // forgotPassword() {
-  //   const dialogRef = this.dialog.open(ForgetPasswordComponent, { width: '400px', position: { top: '155px' }, disableClose: true });
+  //  const dialogRef = this.dialog.open(ForgetPasswordComponent, { width: '400px', position: { top: '155px' }, disableClose: true });
 
-  //   dialogRef.afterClosed().subscribe(result => {
+  //     dialogRef.afterClosed().subscribe(result => {
 
   //   });
-  // }
+  //  }
 
   
 //   myEncryption(e:any){
@@ -164,5 +165,6 @@ showpw:Boolean=true
 //       this.loginForm.get('password')?.setValue(enc);
 //     }
    }
- }
+   
+ 
 
