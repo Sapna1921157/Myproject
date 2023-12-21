@@ -35,7 +35,7 @@ showpw:Boolean=true
   checkStatus = false;
 
 
-
+  assetPath: string = './../../assets';
 
   constructor(private fb: FormBuilder, private router: Router
     
@@ -43,7 +43,7 @@ showpw:Boolean=true
     this.loginForm = this.fb.group({
       username: ['', [Validators.required]],
       password: [''],
-      // orgPassword: ['', [Validators.required], minLengthAsyncValidator(7)],
+     orgPassword: ['', [Validators.required],],
       ip: [''],
       capcha_token: [''],
     })
@@ -163,6 +163,6 @@ showpw:Boolean=true
 //        document.getElementById("orgPassword")?.setAttribute('type','hidden')
 //       this.loginForm.get('password')?.setValue(enc);
 //     }
-  }
-}
+   }
+ }
 
