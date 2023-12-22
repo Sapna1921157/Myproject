@@ -10,6 +10,13 @@ import { RecoverPasswordComponent } from './recover-password/recover-password.co
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RECAPTCHA_SETTINGS, RecaptchaSettings } from 'ng-recaptcha';
+import { environment } from 'src/environments/environment';
+import { NO_ERRORS_SCHEMA } from '@angular/compiler';
+import { RecaptchaModule } from 'ng-recaptcha';
+import { RouterModule, Routes } from '@angular/router';
+
+//import { MatErrorMo } from '@angular/material/input';//
 
 @NgModule({
   declarations: [
@@ -26,8 +33,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatInputModule,
     MatFormFieldModule,
     BrowserAnimationsModule,
+RecaptchaModule,
+     RouterModule,
   ],
-  providers: [],
+
+  
+  schemas:[NO_ERRORS_SCHEMA], 
+  providers: [
+   
+    {
+      provide: RECAPTCHA_SETTINGS,
+      useValue: {
+        siteKey: environment.recaptchasiteKey,
+      } as RecaptchaSettings,
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

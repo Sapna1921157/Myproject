@@ -205,12 +205,12 @@ export class RestService {
   // }
 
   
-  // getpdfFile(downloadFileUrl: any) {
-  //   // console.log('downloadFileUrl',downloadFileUrl);
+  getpdfFile(downloadFileUrl: any) {
+    // console.log('downloadFileUrl',downloadFileUrl);
     
-  //   let fileUrl = downloadFileUrl;
-  //   return this.http.get(fileUrl, { responseType: 'blob' });
-  // }
+    let fileUrl = downloadFileUrl;
+    return this.http.get(fileUrl, { responseType: 'blob' });
+  }
 
 
   // downloadFile(filename: string) {

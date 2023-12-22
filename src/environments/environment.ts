@@ -1,3 +1,5 @@
+const API_URL = "http://localhost:5601";
+
 export const environment = {
     production: false,
     openMapToken: 'pk.eyJ1IjoiaGpvaG4xMjMiLCJhIjoiY2xma3FjcXAxMGQ5azQ2czRmNnAzMHV2cSJ9.JvHcg6FFTSFr1UFPmjwJ6g',
