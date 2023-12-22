@@ -24,7 +24,8 @@ import { environment } from 'src/environments/environment';
 import { RestService } from '../core/rest.service';
 import { AESEncryptDecryptService } from '../common/aesencrypt-decrypt.service';
 import { minLengthAsyncValidator } from '../common/validator';
-
+import { MatInputModule } from '@angular/material/input'; 
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @Component({
   selector: 'app-signup',
