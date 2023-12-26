@@ -15,7 +15,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router,RouterOutlet } from '@angular/router';
 
 
 
@@ -140,6 +140,10 @@ showpw:Boolean=true
   // ngOnDestroy(): void{
   //   this.captchaStatus = false;
   // }
+
+  forgotPassword(){
+    this.router.navigate(['/forget-password'])
+    }
 
   // forgotPassword() {
   //  const dialogRef = this.dialog.open(ForgetPasswordComponent, { width: '400px', position: { top: '155px' }, disableClose: true });

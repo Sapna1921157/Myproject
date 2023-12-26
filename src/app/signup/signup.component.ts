@@ -1,32 +1,14 @@
-// import { Component } from '@angular/core';
-// import { Router } from '@angular/router';
-// import { RouterOutlet } from '@angular/router';
-
-
-// @Component({
-//   selector: 'app-signup',
-//   templateUrl: './signup.component.html',
-//   styleUrls: ['./signup.component.scss']
-// })
-// export class SignupComponent {
-
-//   constructor(private route:Router){
-    
-//   }
-
-// }
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { SignupService } from '../core/signup.service';
-//import { RecaptchaComponent } from 'ng-recaptcha';
+
 import { environment } from 'src/environments/environment';
 import { RestService } from '../core/rest.service';
 import { AESEncryptDecryptService } from '../common/aesencrypt-decrypt.service';
 import { minLengthAsyncValidator } from '../common/validator';
-import { MatInputModule } from '@angular/material/input'; 
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { RouterOutlet } from '@angular/router';
+
+
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -37,12 +19,9 @@ export class SignupComponent implements OnInit {
   signupSubmitted = false;
   assetPath = environment.assetPath;
   captchaStatus = false;
-  sitekey = environment.recaptchasiteKey;
+  siteKey = environment.recaptchasiteKey;
   nameRegexReq = false;
   usernameRegexReq = false;
-
-
-
   constructor(
     private fb: FormBuilder, 
     private router: Router, 
@@ -53,8 +32,6 @@ export class SignupComponent implements OnInit {
      {
     this.initSignupForm();
   }
-
- 
 
   resolved(captchaResponse: string) {
     this.captchaStatus = true;

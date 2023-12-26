@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -9,11 +9,15 @@ import { ForgetPasswordComponent } from './forget-password/forget-password.compo
 import { RecoverPasswordComponent } from './recover-password/recover-password.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RECAPTCHA_SETTINGS, RecaptchaSettings } from 'ng-recaptcha';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { environment } from 'src/environments/environment';
-import { NO_ERRORS_SCHEMA } from '@angular/compiler';
-import { RecaptchaModule } from 'ng-recaptcha';
+// import { NO_ERRORS_SCHEMA } from '@angular/compiler';
+import { MaterialModule } from './common/material.nodule';
+import {
+  RECAPTCHA_SETTINGS,
+  RecaptchaModule,
+  RecaptchaSettings,
+} from 'ng-recaptcha';
 import { RouterModule, Routes } from '@angular/router';
 
 //import { MatErrorMo } from '@angular/material/input';//
@@ -34,13 +38,13 @@ import { RouterModule, Routes } from '@angular/router';
     MatFormFieldModule,
     BrowserAnimationsModule,
 RecaptchaModule,
+MaterialModule,
      RouterModule,
   ],
 
   
   schemas:[NO_ERRORS_SCHEMA], 
   providers: [
-   
     {
       provide: RECAPTCHA_SETTINGS,
       useValue: {
